@@ -1,0 +1,27 @@
+[
+  {
+    "id": "001",
+    "mode": "normal",
+    "title": "SCHOP Creative Course"
+  },
+  {
+    "id": "014",
+    "mode": "normal",
+    "title": "ロボッチャ探究ラボ"
+  },
+  {
+    "id": "021",
+    "mode": "normal",
+    "title": "NEXT FIELD Workshop"
+  },
+  {
+    "id": "002",
+    "mode": "truth",
+    "title": "SUBJECT 002"
+  },
+  {
+    "id": "034",
+    "mode": "truth",
+    "title": "SUBJECT 034"
+  }
+]

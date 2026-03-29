@@ -1,0 +1,29 @@
+[
+  {
+    "id": "001",
+    "title": "SCHOP Creative Course",
+    "subtitle": "スコップ・クリエーティブ・コース",
+    "image": "images/img_program_02_1200x800.png",
+    "summary": "教科横断型の発想力を育てる創造プログラム。",
+    "text": "映像、ことば、制作を横断しながら、子どもたちの独創性を引き出します。",
+    "href": "subject.html?id=001"
+  },
+  {
+    "id": "014",
+    "title": "ロボッチャ探究ラボ",
+    "subtitle": "ロボティクス・実践プログラム",
+    "image": "images/img_program_01_1200x800.png",
+    "summary": "手を動かしながら課題解決力を伸ばす人気講座。",
+    "text": "チームでの制作、試行錯誤、ふり返りを通して、学びを深めます。",
+    "href": "subject.html?id=014"
+  },
+  {
+    "id": "021",
+    "title": "NEXT FIELD Workshop",
+    "subtitle": "フィールドワーク研修",
+    "image": "images/img_program_03_1200x800.png",
+    "summary": "教室の外へ出て、観察と対話を学びに変える実地型プログラム。",
+    "text": "現地での問いづくりを通して、主体的に考える力を育みます。",
+    "href": "subject.html?id=021"
+  }
+]

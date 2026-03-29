@@ -1,0 +1,9 @@
+const STORAGE_KEY = "ikushinsha_progress";
+const DEFAULT_SHARE_URL = "https://x.com/arg_observerx?s=21&t=n9hS9eUFPNMQIQ1S4aDaOw";
+function getProgress(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {count:0, anomalies:{graduates:false, subject:false, research:false}};}catch(e){return {count:0, anomalies:{graduates:false, subject:false, research:false}};}}
+function saveProgress(state){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+function markAnomaly(key){ const p = getProgress(); if(!p.anomalies[key]){ p.anomalies[key]=true; p.count=Object.values(p.anomalies).filter(Boolean).length; saveProgress(p);} return p; }
+function applyGlobalState(){ const p=getProgress(); if(p.count>=3){document.body.classList.add('anomaly-stage');} if(p.count>=3){document.querySelectorAll('[data-stage-copy]').forEach(el=>{ if(el.dataset.stageCopyChanged) el.innerHTML=el.dataset.stageCopyChanged;}); document.querySelectorAll('[data-stage-src]').forEach(el=>{if(el.dataset.stageSrc) el.src=el.dataset.stageSrc;}); document.title = document.body.dataset.dynamicTitle || document.title; }}
+function setupDrawer(){ const btn=document.querySelector('.menu-toggle'); const drawer=document.querySelector('.mobile-drawer'); if(!btn||!drawer) return; btn.addEventListener('click',()=>{drawer.classList.toggle('open');btn.setAttribute('aria-expanded',drawer.classList.contains('open'));}); drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>drawer.classList.remove('open'))); }
+function setCurrentNav(){ const path=location.pathname.split('/').pop() || 'index.html'; document.querySelectorAll('.mobile-drawer a').forEach(a=>{ if(a.getAttribute('href')===path) a.classList.add('current');}); }
+document.addEventListener('DOMContentLoaded', ()=>{setupDrawer(); setCurrentNav(); applyGlobalState();});
