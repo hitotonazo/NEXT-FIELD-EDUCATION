@@ -1,4 +1,4 @@
-# IKUSHINSHA ARG site01
+# NEXT FIELD EDUCATION ARG site01
 
 静的HTML/CSS/JSで構成したスマホ向けWeb探索型ARGサイトです。
 
