@@ -1,20 +1,20 @@
 [
   {
     "title": "プログラム紹介",
-    "snippet": "探究・制作・ロボティクスの講座一覧です。",
-    "keywords": "プログラム 教育 creative robotics field",
+    "snippet": "認知拡張、シミュレーション、観測ログのプログラム一覧です。",
+    "keywords": "program CEP simulation observation logging method field",
     "url": "programs.html"
   },
   {
-    "title": "研究開発",
-    "snippet": "教育評価モデルとAI研究について。",
-    "keywords": "研究 AI 評価 判定 subject database 被験者",
+    "title": "メソッド",
+    "snippet": "観測軸とログ分析の方法論について。",
+    "keywords": "method log observation axis database subject 被験者",
     "url": "research.html"
   },
   {
-    "title": "修了生紹介",
-    "snippet": "修了生の進路と活動記録。",
-    "keywords": "修了生 進路 evaluation protocol selection process",
+    "title": "事例紹介",
+    "snippet": "参加事例と継続プログラムの記録。",
+    "keywords": "case report route evaluation protocol selection process",
     "url": "graduates.html"
   },
   {

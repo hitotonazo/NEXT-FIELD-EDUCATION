@@ -1,27 +1,27 @@
 [
   {
-    "label": "巻き込み力",
+    "label": "連結性",
     "back": "傲慢",
-    "description": "他者と関わりながら推進する力。"
+    "description": "他者や情報をつなぎながら前に進める力。"
   },
   {
-    "label": "判断力",
+    "label": "選択精度",
     "back": "独断",
-    "description": "状況を整理して決める力。"
+    "description": "複数の選択肢から道筋を見極める力。"
   },
   {
-    "label": "主導性",
+    "label": "駆動性",
     "back": "支配欲",
-    "description": "前に立って企画を動かす力。"
+    "description": "判断を実行へ移し、流れを生み出す力。"
   },
   {
-    "label": "独創性",
+    "label": "変形力",
     "back": "逸脱思考",
-    "description": "既存の枠を超える発想。"
+    "description": "既存の枠を崩し、新しい形へ変える発想。"
   },
   {
-    "label": "行動力",
+    "label": "移行速度",
     "back": "衝動性",
-    "description": "考えを実行へ移す速さ。"
+    "description": "考えを行動に切り替える速度。"
   }
 ]

@@ -1,4 +1,4 @@
-const STORAGE_KEY = "ikushinsha_progress";
+const STORAGE_KEY = "nextfield_progress";
 const DEFAULT_SHARE_URL = "https://x.com/arg_observerx?s=21&t=n9hS9eUFPNMQIQ1S4aDaOw";
 function getProgress(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {count:0, anomalies:{graduates:false, subject:false, research:false}};}catch(e){return {count:0, anomalies:{graduates:false, subject:false, research:false}};}}
 function saveProgress(state){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }

@@ -2,25 +2,25 @@
   {
     "name": "三橋 蒼",
     "image": "images/img_graduate_01_800x1000.png",
-    "role": "修了生 2024",
-    "course": "特別研究プログラムへ進学",
-    "detail": "高次教育選抜プログラムへ参加",
-    "caption": "探究の姿勢を伸ばした修了生。"
+    "role": "case report / 2025",
+    "course": "CEP 実践セッション",
+    "detail": "観測ログ・アドバンス",
+    "caption": "問いの立て方と振り返り精度が大きく伸びた事例。"
   },
   {
     "name": "井沢 結",
     "image": "images/img_graduate_02_800x1000.png",
-    "role": "修了生 2024",
-    "course": "特別研究プログラムへ進学",
-    "detail": "高次教育選抜プログラムへ参加",
-    "caption": "自分の問いを深めた修了生。"
+    "role": "case report / 2025",
+    "course": "Simulation Session",
+    "detail": "行動観測フィードバック",
+    "caption": "自分の選択過程を記述できるようになった事例。"
   },
   {
     "name": "篠原 朔",
     "image": "images/img_graduate_03_800x1000.png",
-    "role": "修了生 2023",
-    "course": "特別研究プログラムへ進学",
-    "detail": "高次教育選抜プログラムへ参加",
-    "caption": "表現力と判断力を磨いた修了生。"
+    "role": "case report / 2024",
+    "course": "Observation Logging",
+    "detail": "ケースレビュー会",
+    "caption": "記録から意思決定の癖を発見できた事例。"
   }
 ]

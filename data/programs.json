@@ -1,29 +1,29 @@
 [
   {
     "id": "001",
-    "title": "SCHOP Creative Course",
-    "subtitle": "スコップ・クリエーティブ・コース",
+    "title": "Cognitive Expansion Program",
+    "subtitle": "認知拡張プログラム",
     "image": "images/img_program_02_1200x800.png",
-    "summary": "教科横断型の発想力を育てる創造プログラム。",
-    "text": "映像、ことば、制作を横断しながら、子どもたちの独創性を引き出します。",
+    "summary": "思考の処理速度と選択精度を高める基幹プログラム。",
+    "text": "問いの分解、再構成、言語化を繰り返し、思考の癖そのものを見直します。",
     "href": "subject.html?id=001"
   },
   {
     "id": "014",
-    "title": "ロボッチャ探究ラボ",
-    "subtitle": "ロボティクス・実践プログラム",
+    "title": "Field Simulation Studio",
+    "subtitle": "フィールドシミュレーション",
     "image": "images/img_program_01_1200x800.png",
-    "summary": "手を動かしながら課題解決力を伸ばす人気講座。",
-    "text": "チームでの制作、試行錯誤、ふり返りを通して、学びを深めます。",
+    "summary": "正解のない状況で判断と結果を往復する実践プログラム。",
+    "text": "役割分担、検証、記録を通じて、複数人での意思決定を体験します。",
     "href": "subject.html?id=014"
   },
   {
     "id": "021",
-    "title": "NEXT FIELD Workshop",
-    "subtitle": "フィールドワーク研修",
+    "title": "Observation Logging Method",
+    "subtitle": "観測型ラーニング",
     "image": "images/img_program_03_1200x800.png",
-    "summary": "教室の外へ出て、観察と対話を学びに変える実地型プログラム。",
-    "text": "現地での問いづくりを通して、主体的に考える力を育みます。",
+    "summary": "思考と行動を観測し、記録から次の選択へつなげるログ型プログラム。",
+    "text": "記録の取り方そのものを学び、変化の兆しを自分の言葉で捉えていきます。",
     "href": "subject.html?id=021"
   }
 ]
