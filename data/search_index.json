@@ -1,26 +1,26 @@
 [
   {
-    "title": "プログラム紹介",
-    "snippet": "認知拡張、シミュレーション、観測ログのプログラム一覧です。",
-    "keywords": "program CEP simulation observation logging method field",
+    "title": "ラボ一覧",
+    "snippet": "出前授業、選抜型ラボ、記録フローの一覧です。",
+    "keywords": "program dispatch school outreach scout lab next field",
     "url": "programs.html"
   },
   {
-    "title": "メソッド",
-    "snippet": "観測軸とログ分析の方法論について。",
-    "keywords": "method log observation axis database subject 被験者",
-    "url": "research.html"
-  },
-  {
-    "title": "事例紹介",
-    "snippet": "参加事例と継続プログラムの記録。",
-    "keywords": "case report route evaluation protocol selection process",
+    "title": "ケースノート",
+    "snippet": "修了後の継続先と進路記録。",
+    "keywords": "case route facility career 白砂第七実務棟",
     "url": "graduates.html"
   },
   {
-    "title": "SUBJECT 034",
-    "snippet": "restricted access",
-    "keywords": "subject034 subject 034 database 被験者 監視",
-    "url": "subject.html?id=034"
+    "title": "評価フレーム",
+    "snippet": "AI判定で用いる5項目の評価制度。",
+    "keywords": "evaluation ai 判定 危険性 裏評価 被験者",
+    "url": "research.html"
+  },
+  {
+    "title": "Subject 001",
+    "snippet": "教科1 / フィールドリーディング",
+    "keywords": "subject001 subject 001 教科1 被験者",
+    "url": "subject.html?id=001"
   }
 ]
