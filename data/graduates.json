@@ -1,26 +1,26 @@
 [
   {
-    "name": "三橋 蒼",
+    "name": "杉田 環",
     "image": "images/img_graduate_01_800x1000.png",
-    "role": "case report / 2025",
-    "course": "CEP 実践セッション",
-    "detail": "観測ログ・アドバンス",
-    "caption": "問いの立て方と振り返り精度が大きく伸びた事例。"
+    "role": "case note / 2025",
+    "course": "Signal Mapping 基礎ノート",
+    "detail": "Archive Session 02",
+    "caption": "他者のメモを手がかりに、自分の観察軸を作れたケース。"
   },
   {
-    "name": "井沢 結",
+    "name": "古谷 澪",
     "image": "images/img_graduate_02_800x1000.png",
-    "role": "case report / 2025",
-    "course": "Simulation Session",
-    "detail": "行動観測フィードバック",
-    "caption": "自分の選択過程を記述できるようになった事例。"
+    "role": "case note / 2025",
+    "course": "Scenario Drift Trial",
+    "detail": "Variation Review",
+    "caption": "複数人の場面で判断のずれを言葉にできたケース。"
   },
   {
-    "name": "篠原 朔",
+    "name": "長井 朔",
     "image": "images/img_graduate_03_800x1000.png",
-    "role": "case report / 2024",
-    "course": "Observation Logging",
-    "detail": "ケースレビュー会",
-    "caption": "記録から意思決定の癖を発見できた事例。"
+    "role": "case note / 2024",
+    "course": "Reflection Archive",
+    "detail": "Transcript Review",
+    "caption": "短いメモの蓄積から、自分の反応順序を把握できたケース。"
   }
 ]

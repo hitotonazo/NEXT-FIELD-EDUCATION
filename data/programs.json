@@ -1,29 +1,29 @@
 [
   {
-    "id": "001",
-    "title": "Cognitive Expansion Program",
-    "subtitle": "認知拡張プログラム",
+    "id": "008",
+    "title": "Signal Mapping Lab",
+    "subtitle": "シグナル・マッピング・ラボ",
     "image": "images/img_program_02_1200x800.png",
-    "summary": "思考の処理速度と選択精度を高める基幹プログラム。",
-    "text": "問いの分解、再構成、言語化を繰り返し、思考の癖そのものを見直します。",
-    "href": "subject.html?id=001"
+    "summary": "断片情報を整理し、自分なりの見取り図をつくるベーシックラボ。",
+    "text": "観察メモ、配置替え、言い換えを繰り返し、捉え方の偏りをゆっくり調整します。",
+    "href": "subject.html?id=008"
   },
   {
-    "id": "014",
-    "title": "Field Simulation Studio",
-    "subtitle": "フィールドシミュレーション",
+    "id": "013",
+    "title": "Scenario Drift Workshop",
+    "subtitle": "シナリオ・ドリフト・ワークショップ",
     "image": "images/img_program_01_1200x800.png",
-    "summary": "正解のない状況で判断と結果を往復する実践プログラム。",
-    "text": "役割分担、検証、記録を通じて、複数人での意思決定を体験します。",
-    "href": "subject.html?id=014"
+    "summary": "条件が少しずつ変わる場面を体験し、選択の揺れ方を観察するワークショップ。",
+    "text": "役割を持ち替えながら同じ状況を再演し、判断がずれる瞬間を記録していきます。",
+    "href": "subject.html?id=013"
   },
   {
     "id": "021",
-    "title": "Observation Logging Method",
-    "subtitle": "観測型ラーニング",
+    "title": "Reflection Archive Studio",
+    "subtitle": "リフレクション・アーカイブ・スタジオ",
     "image": "images/img_program_03_1200x800.png",
-    "summary": "思考と行動を観測し、記録から次の選択へつなげるログ型プログラム。",
-    "text": "記録の取り方そのものを学び、変化の兆しを自分の言葉で捉えていきます。",
+    "summary": "メモや振り返りを集め、読み返せる形へ整える記録スタジオ。",
+    "text": "残し方そのものを整え、見逃していた変化をあとから拾い直せるようにします。",
     "href": "subject.html?id=021"
   }
 ]
