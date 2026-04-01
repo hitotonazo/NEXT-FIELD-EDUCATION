@@ -32,3 +32,21 @@ function closeSiteAlteredOverlay() { const noiseOverlay=document.getElementById(
 function handleNoiseOverlayClick() { closeSiteAlteredOverlay(); if (typeof noiseNextAction === 'function') { const action = noiseNextAction; noiseNextAction = null; action(); return; } noiseNextAction = null; }
 
 document.addEventListener('DOMContentLoaded', ()=>{applyAssetSources(); ensureNoiseOverlay(); setupDrawer(); setCurrentNav(); applyGlobalState();});
+
+
+function bindNoiseMessageHover(){
+  const overlay=document.getElementById("noise-overlay");
+  if(!overlay || overlay.dataset.hoverBound==="1") return;
+  overlay.dataset.hoverBound="1";
+  const apply=(clientX, clientY)=>{
+    const x=((clientX/window.innerWidth)-0.5)*18;
+    const y=((clientY/window.innerHeight)-0.5)*14;
+    overlay.style.setProperty("--noise-float-x", `${x.toFixed(2)}px`);
+    overlay.style.setProperty("--noise-float-y", `${y.toFixed(2)}px`);
+  };
+  overlay.addEventListener("mousemove", (e)=> apply(e.clientX, e.clientY));
+  overlay.addEventListener("touchmove", (e)=>{ const t=e.touches && e.touches[0]; if(t) apply(t.clientX, t.clientY); }, {passive:true});
+  window.addEventListener("resize", ()=>{ overlay.style.setProperty("--noise-float-x", "0px"); overlay.style.setProperty("--noise-float-y", "0px"); });
+}
+
+document.addEventListener("DOMContentLoaded", bindNoiseMessageHover);

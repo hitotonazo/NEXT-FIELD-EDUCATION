@@ -89,3 +89,12 @@ img{max-width:100%;display:block} a{text-decoration:none;color:inherit} button{f
 @keyframes rollingBand {0% {transform: translateY(-24%);}100% {transform: translateY(24%);}}
 @keyframes flashSweep {0% {opacity: 0;transform: translateY(-18%);}35% {opacity: 0.42;}100% {opacity: 0;transform: translateY(18%);}}
 @media (max-width: 760px) {.noise-message {white-space: normal;letter-spacing: 0.08em;line-height: 1.5;}}
+
+
+/* v7 adjustments */
+.top-search-box{margin-top:10px; margin-bottom:6px;}
+.top-search-box h2{font-size:clamp(24px,6vw,38px);}
+.noise-message {position: fixed; top: 50vh; left: 50vw; transform: translate3d(calc(-50% + var(--noise-float-x, 0px)), calc(-50% + var(--noise-float-y, 0px)), 0); will-change: transform;}
+.noise-overlay.is-active .noise-message {animation: noiseHoverFloat 3.2s ease-in-out infinite alternate;}
+@keyframes noiseHoverFloat {0% {transform: translate3d(calc(-50% + var(--noise-float-x, 0px)), calc(-50% + var(--noise-float-y, 0px)), 0);} 50% {transform: translate3d(calc(-50% + var(--noise-float-x, 0px) + 6px), calc(-50% + var(--noise-float-y, 0px) - 8px), 0);} 100% {transform: translate3d(calc(-50% + var(--noise-float-x, 0px) - 4px), calc(-50% + var(--noise-float-y, 0px) + 6px), 0);}}
+@media (max-width: 760px) {.top-search-box{margin-top:6px}.noise-message {top: 50vh; left: 50vw;}}
