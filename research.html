@@ -1,4 +1,4 @@
-<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>NEXT FIELD EDUCATION | Frames</title><meta name="description" content="NEXT FIELD EDUCATIONの架空教育サイト"><link rel="icon" href="images/img_favicon_64x64.png"><link rel="stylesheet" href="css/style.css"></head><body data-dynamic-title="NEXT FIELD EDUCATION | Internal Evaluation Axes"><header class="site-header"><div class="container site-header-inner"><button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button><a href="index.html" class="brand"><img src="images/img_logo_400x120.png" alt="NEXT FIELD EDUCATION"></a><a class="header-icon" href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noreferrer">f</a></div><div class="mobile-drawer"><nav><a href="index.html">トップ</a><a href="programs.html">ラボ</a><a href="graduates.html">ケースノート</a><a href="research.html">フレーム</a><a href="company.html">スタジオ案内</a><a href="contact.html">コンタクト</a></nav></div></header>
+<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>NEXT FIELD EDUCATION | Frames</title><meta name="description" content="NEXT FIELD EDUCATIONの架空教育サイト"><link rel="icon" href="images/img_favicon_64x64.png"><link rel="stylesheet" href="css/style.css"></head><body class="truth-theme" data-dynamic-title="NEXT FIELD EDUCATION | Internal Evaluation Axes"><header class="site-header"><div class="container site-header-inner"><button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button><a href="index.html" class="brand"><img src="images/img_logo_400x120.png" alt="NEXT FIELD EDUCATION"></a><a class="header-icon" href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noreferrer">f</a></div><div class="mobile-drawer"><nav><a href="index.html">トップ</a><a href="programs.html">ラボ</a><a href="graduates.html">ケースノート</a><a href="research.html">フレーム</a><a href="company.html">スタジオ案内</a><a href="contact.html">コンタクト</a></nav></div></header>
 <section class="page-hero"><div class="container"><h1>FRAMES</h1><p>AI判定で継続先を選ぶための、5項目の評価制度をご紹介します。</p></div></section>
 <section class="section"><div class="container"><div class="grid-2"><div class="research-card"><img src="images/img_research_01_1200x800.png" data-stage-src="images/anomaly/img_research_flip_1200x800.png" alt="評価制度"><div class="content"><h2>AI判定で選ばれる適切な進路</h2><p>出前授業で取得した行動ログを解析し、参加者ごとに適切な継続先を提案します。</p><p data-stage-copy data-stage-copy-changed="表評価は対外説明用、裏評価は危険性判定用。両者は同じデータから生成されます。">評価は学校現場で扱いやすい言葉に変換しており、本人や保護者にも説明しやすい形式です。</p></div></div><div class="copy-panel"><h2 style="margin-top:0">5項目評価制度</h2><p>カードをタップすると、裏側の補助ラベルを確認できます。</p><p class="note">※違和感2は違和感1到達後に機能します。</p></div></div></div></section>
 <section class="section"><div class="container"><div class="flip-grid">
@@ -7,25 +7,76 @@
 <div class="flip-card" data-flip-card><div class="flip-card-inner"><div class="flip-face front"><div class="kv-small">public score</div><h3>言語化力</h3><p>見えない違和感を言葉にする力。</p></div><div class="flip-face back"><div class="kv-small">hidden risk</div><h3>扇動性</h3><p>言葉で他者の不安や怒りを誘導する傾向。</p></div></div></div>
 <div class="flip-card" data-flip-card><div class="flip-card-inner"><div class="flip-face front"><div class="kv-small">public score</div><h3>先読み力</h3><p>次の展開を予測して準備する力。</p></div><div class="flip-face back"><div class="kv-small">hidden risk</div><h3>支配欲</h3><p>予測を利用し、相手の選択肢を狭める傾向。</p></div></div></div>
 <div class="flip-card" data-flip-card><div class="flip-card-inner"><div class="flip-face front"><div class="kv-small">public score</div><h3>持久性</h3><p>長く集中し続ける力。</p></div><div class="flip-face back"><div class="kv-small">hidden risk</div><h3>執着</h3><p>対象を手放さず、同一行動を反復する傾向。</p></div></div></div>
-</div><div id="eval-truth-panel" class="copy-panel hidden" style="margin-top:20px"><h2 style="margin-top:0">内部評価メモ</h2><p>表評価は教育資料用の言い換えにすぎません。内部では同じ5項目を危険性として扱い、AI判定で監理区画・労務区画・継続観測区画を振り分けています。</p><p class="note">この表示は裏評価に到達したあとに現れます。</p></div>
-<div class="copy-panel" style="margin-top:20px">
-  <h2 style="margin-top:0">5段階レーダーチャートモデル</h2>
-  <p>5項目評価は、人物ごとのバランスをレーダーチャート化して管理しています。表評価では教育適性の見え方を示します。</p>
-  <div class="radar-model-grid">
-    <div class="radar-wrap radar-wrap-large">
-      <canvas class="radar-chart" width="320" height="260"
-        data-radar-labels='["巻き込み力","切替速度","言語化力","先読み力","持久性"]'
-        data-radar-values='[4,4,3,5,4]'></canvas>
+</div><div class="copy-panel radar-flip-shell" id="radar-model-shell" style="margin-top:20px">
+  <button type="button" class="dogear-trigger" id="eval-dogear" aria-label="内部資料をめくる"></button>
+  <div class="radar-model-flip" id="radar-model-flip">
+    <div class="radar-model-face radar-model-front">
+      <h2 style="margin-top:0">5段階レーダーチャートモデル</h2>
+      <p>5項目評価は、人物ごとのバランスをレーダーチャート化して管理しています。表評価では教育適性の見え方を示します。</p>
+      <div class="radar-model-grid">
+        <div class="radar-wrap radar-wrap-large">
+          <canvas class="radar-chart" width="320" height="260"
+            data-radar-labels='["巻き込み力","切替速度","言語化力","先読み力","持久性"]'
+            data-radar-values='[4,4,3,5,4]'></canvas>
+        </div>
+        <ul class="score-list score-list-model">
+          <li><span>巻き込み力</span><strong>周囲を動かす力</strong></li>
+          <li><span>切替速度</span><strong>状況変化への反応速度</strong></li>
+          <li><span>言語化力</span><strong>違和感を言葉にする力</strong></li>
+          <li><span>先読み力</span><strong>展開予測と準備力</strong></li>
+          <li><span>持久性</span><strong>反復と集中の継続力</strong></li>
+        </ul>
+      </div>
     </div>
-    <ul class="score-list score-list-model">
-      <li><span>巻き込み力</span><strong>周囲を動かす力</strong></li>
-      <li><span>切替速度</span><strong>状況変化への反応速度</strong></li>
-      <li><span>言語化力</span><strong>違和感を言葉にする力</strong></li>
-      <li><span>先読み力</span><strong>展開予測と準備力</strong></li>
-      <li><span>持久性</span><strong>反復と集中の継続力</strong></li>
-    </ul>
+    <div class="radar-model-face radar-model-back">
+      <h2 style="margin-top:0">5段階危険性反転モデル</h2>
+      <p>内部判定では同一の5軸を危険性ラベルへ変換し、監理区画・労務区画・継続観測区画の振り分けに使用します。</p>
+      <div class="radar-model-grid">
+        <div class="radar-wrap radar-wrap-large">
+          <canvas class="radar-chart" width="320" height="260"
+            data-radar-labels='["傲慢","過剰反応","扇動性","支配欲","執着"]'
+            data-radar-values='[4,4,3,5,4]'></canvas>
+        </div>
+        <ul class="score-list score-list-model score-list-hidden">
+          <li><span>傲慢</span><strong>他者の意志を上書きする傾向</strong></li>
+          <li><span>過剰反応</span><strong>刺激で行動が急激に変化する</strong></li>
+          <li><span>扇動性</span><strong>言葉で不安や怒りを誘導する</strong></li>
+          <li><span>支配欲</span><strong>予測を利用して選択肢を狭める</strong></li>
+          <li><span>執着</span><strong>対象を手放さず反復を続ける</strong></li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <p class="note">※裏評価では同一の軸が危険性ラベルへ反転します。</p>
 </div>
 </div></section>
-<footer class="footer"><div class="container"><div>©ぺいぽぴー</div><div>※このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。</div></div></footer><script src="js/config.js"></script><script src="js/script.js"></script><script src="js/effects.js"></script><script>document.addEventListener('DOMContentLoaded',()=>{const panel=document.getElementById('eval-truth-panel');if(getStage()>2){panel.classList.remove('hidden');document.querySelectorAll('[data-flip-card]').forEach(c=>c.classList.add('is-flipped'));}document.querySelectorAll('[data-flip-card]').forEach(card=>{card.addEventListener('click',()=>{if(getStage()<2){card.classList.toggle('is-flipped');return;} if(getStage()===2){runSiteAlteredOverlay(()=>{document.querySelectorAll('[data-flip-card]').forEach(c=>c.classList.add('is-flipped'));panel.classList.remove('hidden');markAnomaly('research');setStage(3);}); return;} card.classList.toggle('is-flipped');});});});</script></body></html>
+<footer class="footer"><div class="container"><div>©ぺいぽぴー</div><div>※このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。</div></div></footer><script src="js/config.js"></script><script src="js/script.js"></script><script src="js/effects.js"></script><script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const shell=document.getElementById('radar-model-shell');
+  const radarFlip=document.getElementById('radar-model-flip');
+  const dogear=document.getElementById('eval-dogear');
+  const cards=[...document.querySelectorAll('[data-flip-card]')];
+  const flipAll=()=>{
+    cards.forEach(c=>c.classList.add('is-flipped'));
+    if(radarFlip) radarFlip.classList.add('is-flipped');
+    markAnomaly('research');
+    setStage(3);
+    initRadarCharts();
+  };
+  if(getStage()>2){
+    flipAll();
+  }
+  if(dogear){
+    dogear.addEventListener('click',()=>{
+      if(getStage()<2) return;
+      if(getStage()===2){
+        runSiteAlteredOverlay(()=>{ flipAll(); });
+        return;
+      }
+      const isFlipped = radarFlip && radarFlip.classList.contains('is-flipped');
+      cards.forEach(c=>c.classList.toggle('is-flipped', !isFlipped));
+      if(radarFlip) radarFlip.classList.toggle('is-flipped');
+      initRadarCharts();
+    });
+  }
+});
+</script></body></html>

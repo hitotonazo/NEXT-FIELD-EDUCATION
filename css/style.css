@@ -125,3 +125,17 @@ img{max-width:100%;display:block} a{text-decoration:none;color:inherit} button{f
   .radar-block{grid-template-columns:minmax(240px,320px) 1fr}
   .radar-model-grid{grid-template-columns:minmax(280px,360px) 1fr}
 }
+
+
+/* anomaly 2 radar shell */
+.radar-flip-shell{position:relative;overflow:hidden}
+.dogear-trigger{position:absolute;top:0;right:0;width:74px;height:74px;border:0;background:linear-gradient(135deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.04) 49%, rgba(230,232,228,.96) 50%, rgba(208,212,206,.96) 100%);clip-path:polygon(100% 0,100% 100%,0 0);cursor:pointer;z-index:5;box-shadow:-8px 8px 18px rgba(0,0,0,.08)}
+.dogear-trigger::before{content:"";position:absolute;top:10px;right:10px;width:26px;height:26px;border-top:2px solid rgba(90,110,94,.72);border-right:2px solid rgba(90,110,94,.72);transform:rotate(0deg)}
+.radar-model-flip{position:relative;transform-style:preserve-3d;transition:transform .65s ease}
+.radar-model-flip.is-flipped{transform:rotateY(180deg)}
+.radar-model-face{backface-visibility:hidden}
+.radar-model-back{position:absolute;inset:0;transform:rotateY(180deg);padding:0;background:transparent}
+.score-list-hidden li strong{color:#bde8cb}
+.truth-theme .dogear-trigger{background:linear-gradient(135deg, rgba(255,255,255,.02) 0%, rgba(255,255,255,.02) 49%, rgba(57,62,68,.98) 50%, rgba(32,36,42,.98) 100%);box-shadow:-10px 10px 24px rgba(0,0,0,.26)}
+.truth-theme .dogear-trigger::before{border-top-color:rgba(189,232,203,.7);border-right-color:rgba(189,232,203,.7)}
+.truth-theme .score-list-hidden li strong{color:#bde8cb}
