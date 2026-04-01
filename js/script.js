@@ -50,3 +50,93 @@ function bindNoiseMessageHover(){
 }
 
 document.addEventListener("DOMContentLoaded", bindNoiseMessageHover);
+
+
+function drawRadarChart(canvas){
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  if(!ctx) return;
+
+  const labels = JSON.parse(canvas.dataset.radarLabels || "[]");
+  const values = JSON.parse(canvas.dataset.radarValues || "[]");
+  if(!labels.length || !values.length) return;
+
+  const w = canvas.width;
+  const h = canvas.height;
+  const cx = w / 2;
+  const cy = h / 2 + 6;
+  const radius = Math.min(w, h) * 0.31;
+  const maxValue = 5;
+  const steps = 5;
+
+  ctx.clearRect(0, 0, w, h);
+  ctx.lineWidth = 1;
+
+  for(let step=1; step<=steps; step++){
+    const r = radius * (step / steps);
+    ctx.beginPath();
+    labels.forEach((_, i) => {
+      const angle = -Math.PI / 2 + (Math.PI * 2 * i / labels.length);
+      const x = cx + Math.cos(angle) * r;
+      const y = cy + Math.sin(angle) * r;
+      if(i===0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    });
+    ctx.closePath();
+    ctx.strokeStyle = "rgba(120, 170, 140, 0.28)";
+    ctx.stroke();
+  }
+
+  labels.forEach((label, i) => {
+    const angle = -Math.PI / 2 + (Math.PI * 2 * i / labels.length);
+    const axisX = cx + Math.cos(angle) * radius;
+    const axisY = cy + Math.sin(angle) * radius;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.lineTo(axisX, axisY);
+    ctx.strokeStyle = "rgba(120, 170, 140, 0.32)";
+    ctx.stroke();
+
+    const textX = cx + Math.cos(angle) * (radius + 24);
+    const textY = cy + Math.sin(angle) * (radius + 24);
+    ctx.fillStyle = document.body.classList.contains("truth-theme") ? "#bde8cb" : "#547e47";
+    ctx.font = "12px sans-serif";
+    ctx.textAlign = textX < cx - 5 ? "right" : textX > cx + 5 ? "left" : "center";
+    ctx.textBaseline = textY < cy - 5 ? "bottom" : textY > cy + 5 ? "top" : "middle";
+    ctx.fillText(label, textX, textY);
+  });
+
+  ctx.beginPath();
+  values.forEach((value, i) => {
+    const angle = -Math.PI / 2 + (Math.PI * 2 * i / labels.length);
+    const r = radius * (Math.max(0, Math.min(maxValue, value)) / maxValue);
+    const x = cx + Math.cos(angle) * r;
+    const y = cy + Math.sin(angle) * r;
+    if(i===0) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  });
+  ctx.closePath();
+  ctx.fillStyle = "rgba(95, 170, 120, 0.22)";
+  ctx.strokeStyle = "rgba(95, 170, 120, 0.95)";
+  ctx.lineWidth = 2;
+  ctx.fill();
+  ctx.stroke();
+
+  values.forEach((value, i) => {
+    const angle = -Math.PI / 2 + (Math.PI * 2 * i / labels.length);
+    const r = radius * (Math.max(0, Math.min(maxValue, value)) / maxValue);
+    const x = cx + Math.cos(angle) * r;
+    const y = cy + Math.sin(angle) * r;
+    ctx.beginPath();
+    ctx.arc(x, y, 3.5, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(95, 170, 120, 1)";
+    ctx.fill();
+  });
+}
+
+function initRadarCharts(){
+  document.querySelectorAll(".radar-chart").forEach(drawRadarChart);
+}
+
+document.addEventListener('DOMContentLoaded', initRadarCharts);
+window.addEventListener('resize', initRadarCharts);
