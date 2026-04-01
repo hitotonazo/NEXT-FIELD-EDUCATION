@@ -1,4 +1,4 @@
-<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>NEXT FIELD EDUCATION | Frames</title><meta name="description" content="NEXT FIELD EDUCATIONの架空教育サイト"><link rel="icon" href="images/img_favicon_64x64.png"><link rel="stylesheet" href="css/style.css"></head><body class="truth-theme" data-dynamic-title="NEXT FIELD EDUCATION | Internal Evaluation Axes"><header class="site-header"><div class="container site-header-inner"><button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button><a href="index.html" class="brand"><img src="images/img_logo_400x120.png" alt="NEXT FIELD EDUCATION"></a><a class="header-icon" href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noreferrer">f</a></div><div class="mobile-drawer"><nav><a href="index.html">トップ</a><a href="programs.html">ラボ</a><a href="graduates.html">ケースノート</a><a href="research.html">フレーム</a><a href="company.html">スタジオ案内</a><a href="contact.html">コンタクト</a></nav></div></header>
+<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>NEXT FIELD EDUCATION | Frames</title><meta name="description" content="NEXT FIELD EDUCATIONの架空教育サイト"><link rel="icon" href="images/img_favicon_64x64.png"><link rel="stylesheet" href="css/style.css"></head><body class="" data-dynamic-title="NEXT FIELD EDUCATION | Internal Evaluation Axes"><header class="site-header"><div class="container site-header-inner"><button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button><a href="index.html" class="brand"><img src="images/img_logo_400x120.png" alt="NEXT FIELD EDUCATION"></a><a class="header-icon" href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noreferrer">f</a></div><div class="mobile-drawer"><nav><a href="index.html">トップ</a><a href="programs.html">ラボ</a><a href="graduates.html">ケースノート</a><a href="research.html">フレーム</a><a href="company.html">スタジオ案内</a><a href="contact.html">コンタクト</a></nav></div></header>
 <section class="page-hero"><div class="container"><h1>FRAMES</h1><p>AI判定で継続先を選ぶための、5項目の評価制度をご紹介します。</p></div></section>
 <section class="section"><div class="container"><div class="grid-2"><div class="research-card"><img src="images/img_research_01_1200x800.png" data-stage-src="images/anomaly/img_research_flip_1200x800.png" alt="評価制度"><div class="content"><h2>AI判定で選ばれる適切な進路</h2><p>出前授業で取得した行動ログを解析し、参加者ごとに適切な継続先を提案します。</p><p data-stage-copy data-stage-copy-changed="表評価は対外説明用、裏評価は危険性判定用。両者は同じデータから生成されます。">評価は学校現場で扱いやすい言葉に変換しており、本人や保護者にも説明しやすい形式です。</p></div></div><div class="copy-panel"><h2 style="margin-top:0">5項目評価制度</h2><p>カードをタップすると、裏側の補助ラベルを確認できます。</p><p class="note">※違和感2は違和感1到達後に機能します。</p></div></div></div></section>
 <section class="section"><div class="container"><div class="flip-grid">
@@ -51,31 +51,40 @@
 </div></section>
 <footer class="footer"><div class="container"><div>©ぺいぽぴー</div><div>※このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。</div></div></footer><script src="js/config.js"></script><script src="js/script.js"></script><script src="js/effects.js"></script><script>
 document.addEventListener('DOMContentLoaded',()=>{
-  const shell=document.getElementById('radar-model-shell');
   const radarFlip=document.getElementById('radar-model-flip');
   const dogear=document.getElementById('eval-dogear');
   const cards=[...document.querySelectorAll('[data-flip-card]')];
-  const flipAll=()=>{
+
+  const applyReverseMode=()=>{
+    document.body.classList.add('truth-theme');
     cards.forEach(c=>c.classList.add('is-flipped'));
     if(radarFlip) radarFlip.classList.add('is-flipped');
     markAnomaly('research');
     setStage(3);
     initRadarCharts();
   };
+
+  const applyFrontMode=()=>{
+    document.body.classList.remove('truth-theme');
+    cards.forEach(c=>c.classList.remove('is-flipped'));
+    if(radarFlip) radarFlip.classList.remove('is-flipped');
+    initRadarCharts();
+  };
+
   if(getStage()>2){
-    flipAll();
+    applyReverseMode();
+  } else {
+    applyFrontMode();
   }
+
   if(dogear){
     dogear.addEventListener('click',()=>{
       if(getStage()<2) return;
       if(getStage()===2){
-        runSiteAlteredOverlay(()=>{ flipAll(); });
+        runSiteAlteredOverlay(()=>{ applyReverseMode(); });
         return;
       }
-      const isFlipped = radarFlip && radarFlip.classList.contains('is-flipped');
-      cards.forEach(c=>c.classList.toggle('is-flipped', !isFlipped));
-      if(radarFlip) radarFlip.classList.toggle('is-flipped');
-      initRadarCharts();
+      applyReverseMode();
     });
   }
 });

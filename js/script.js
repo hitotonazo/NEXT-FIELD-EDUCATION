@@ -140,3 +140,21 @@ function initRadarCharts(){
 
 document.addEventListener('DOMContentLoaded', initRadarCharts);
 window.addEventListener('resize', initRadarCharts);
+
+function resetExplorationState(){
+  localStorage.removeItem(STORAGE_KEY);
+  const shareKey = (window.NFE_CONFIG && window.NFE_CONFIG.SHARE_URL_STORAGE_KEY) || "nextfield_share_url";
+  localStorage.removeItem(shareKey);
+}
+function initResetButton(){
+  const btn = document.getElementById('reset-progress-btn');
+  if(!btn) return;
+  btn.addEventListener('click', ()=>{
+    resetExplorationState();
+    const results = document.getElementById('search-results');
+    const input = document.getElementById('site-search');
+    if(input) input.value = '';
+    if(results) results.innerHTML = '<div class="search-result">探索状態をリセットしました。</div>';
+  });
+}
+document.addEventListener('DOMContentLoaded', initResetButton);
