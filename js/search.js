@@ -16,7 +16,7 @@ async function initSearch(){
       runSiteAlteredOverlay(()=>{
         markAnomaly('graduates');
         setStage(2);
-        fadeTo('graduates.html', 260);
+        window.location.href='facility.html';
       });
       return;
     }
@@ -26,7 +26,7 @@ async function initSearch(){
         runSiteAlteredOverlay(()=>{
           markAnomaly('subject');
           setStage(4);
-          fadeTo('database.html', 260);
+          window.location.href='database.html';
         });
       } else {
         results.innerHTML='<div class="search-result">該当する結果は見つかりませんでした。</div>';

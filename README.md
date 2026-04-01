@@ -13,3 +13,10 @@
 - HTML 上は `images/...` のまま置き、`js/script.js` で R2 URL に置き換えます
 - `R2_PUBLIC_BASE` が未設定でも、ローカルの `images/` を読むフォールバック付きです
 - X共有の元URLは `DEFAULT_SHARE_URL` を初期値にしています
+
+- facility.html : 白砂第七実務棟の裏ページ
+
+
+v9 fix:
+- 白砂第七実務棟 検索後は改変演出クリック後に facility.html へ直接遷移
+- graduates.html の null エラーを修正
