@@ -98,3 +98,30 @@ img{max-width:100%;display:block} a{text-decoration:none;color:inherit} button{f
 .noise-overlay.is-active .noise-message {animation: noiseHoverFloat 3.2s ease-in-out infinite alternate;}
 @keyframes noiseHoverFloat {0% {transform: translate3d(calc(-50% + var(--noise-float-x, 0px)), calc(-50% + var(--noise-float-y, 0px)), 0);} 50% {transform: translate3d(calc(-50% + var(--noise-float-x, 0px) + 6px), calc(-50% + var(--noise-float-y, 0px) - 8px), 0);} 100% {transform: translate3d(calc(-50% + var(--noise-float-x, 0px) - 4px), calc(-50% + var(--noise-float-y, 0px) + 6px), 0);}}
 @media (max-width: 760px) {.top-search-box{margin-top:6px}.noise-message {top: 50vh; left: 50vw;}}
+
+
+/* radar / case details */
+.graduate-list-detailed{grid-template-columns:1fr;gap:24px}
+.graduate-card-detailed{display:grid}
+.graduate-card-detailed .content{display:grid;gap:14px}
+.radar-block{display:grid;gap:14px;align-items:center;padding:14px;border:1px solid rgba(84,126,71,.18);border-radius:14px;background:rgba(84,126,71,.05)}
+.radar-wrap{display:flex;justify-content:center;align-items:center;min-height:220px}
+.radar-wrap canvas{max-width:100%;height:auto}
+.score-list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.score-list li{display:flex;justify-content:space-between;gap:12px;padding-bottom:6px;border-bottom:1px dashed rgba(0,0,0,.12);font-size:14px}
+.score-list li strong{font-weight:700}
+.case-detail{padding:14px;border-radius:14px;background:#f7faf6;border:1px solid rgba(84,126,71,.14)}
+.case-detail h3{margin:0 0 10px;color:#547e47}
+.case-detail p{margin:0 0 8px}
+.radar-model-grid{display:grid;gap:16px;align-items:center}
+.radar-wrap-large{min-height:260px}
+.score-list-model li strong{font-weight:600;color:#547e47}
+.truth-theme .radar-block{background:rgba(127,203,155,.06);border-color:rgba(127,203,155,.18)}
+.truth-theme .score-list li{border-bottom-color:rgba(255,255,255,.12)}
+.truth-theme .case-detail{background:#12161c;border-color:rgba(127,203,155,.16)}
+.truth-theme .case-detail h3,.truth-theme .score-list-model li strong{color:#bde8cb}
+@media (min-width:900px){
+  .graduate-card-detailed{grid-template-columns:minmax(240px,320px) 1fr}
+  .radar-block{grid-template-columns:minmax(240px,320px) 1fr}
+  .radar-model-grid{grid-template-columns:minmax(280px,360px) 1fr}
+}
