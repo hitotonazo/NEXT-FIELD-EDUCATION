@@ -21,7 +21,7 @@ async function initSearch(){
       return;
     }
 
-    if(q==='被験者'){
+    if(q==='被験者' || qLower==='subject' || /^subject\d*$/i.test(q)){
       if(getStage()>=3){
         runSiteAlteredOverlay(()=>{
           markAnomaly('subject');

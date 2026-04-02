@@ -163,3 +163,24 @@ img{max-width:100%;display:block} a{text-decoration:none;color:inherit} button{f
 .flip-face.back .blood-text{
   display:inline-block;
 }
+
+
+.hidden-parameter-list{display:grid;gap:12px}
+.hidden-parameter-item{padding:12px 14px;border:1px solid rgba(127,203,155,.12);border-radius:14px;background:rgba(255,255,255,.03)}
+.hidden-parameter-item h3{margin:0 0 6px}
+.hidden-parameter-item p{margin:0 0 6px}
+.param-case-ref{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#d8b5b5}
+
+.truth-intro-panel{border:1px solid rgba(127,203,155,.12);background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01))}
+.subject-truth-list{display:grid;gap:20px}
+.truth-subject-card{background:#141922;border:1px solid rgba(127,203,155,.12);border-radius:18px;padding:18px;box-shadow:0 12px 28px rgba(0,0,0,.22)}
+.truth-subject-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px}
+.truth-subject-head h2{margin:8px 0 0;color:#dbe7df;font-size:clamp(24px,4.2vw,34px)}
+.blood-badge{padding:8px 12px;border-radius:999px;background:rgba(140,18,18,.16);color:#d37d7d;border:1px solid rgba(175,40,40,.34);font-size:13px;letter-spacing:.08em}
+.truth-two-col{display:grid;gap:16px}
+.truth-block{background:#10151d;border:1px solid rgba(127,203,155,.08);border-radius:16px;padding:16px}
+.truth-block h3{margin:0 0 10px;color:#bde8cb}
+.truth-parameter-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.truth-parameter-list li{display:grid;gap:4px;padding-bottom:10px;border-bottom:1px dashed rgba(255,255,255,.08)}
+.truth-parameter-list strong{font-size:16px}
+@media (min-width:900px){.truth-two-col{grid-template-columns:1.05fr 1fr}}
