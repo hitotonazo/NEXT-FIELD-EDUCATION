@@ -278,3 +278,18 @@ img{max-width:100%;display:block} a{text-decoration:none;color:inherit} button{f
     top:96px;
   }
 }
+
+.truth-row{
+  display:grid;
+  gap:20px;
+}
+.truth-image img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+}
+@media(min-width:900px){
+  .truth-row{
+    grid-template-columns:300px 1fr;
+  }
+}
