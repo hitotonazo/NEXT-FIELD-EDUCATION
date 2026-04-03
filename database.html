@@ -4,12 +4,31 @@
 <section class="page-hero"><div class="container"><h1>SUBJECT ARCHIVE</h1><p>ケースノート外部公開版から除外された内部対象者記録。Subject検索でのみ到達可能。</p></div></section>
 
 <section class="section"><div class="container"><div class="copy-panel truth-intro-panel"><h2 class="blood-text" style="margin-top:0">内部分類対象一覧</h2><p>ケースノートで紹介されていた若年対象者は、教育支援対象ではなく、AI危険人物判定プロジェクトにおける観測対象です。表の「資質」は裏では危険性ラベルとして扱われ、出前授業で抽出後、継続プログラムを経て白砂第七実務棟へ固定接続されます。</p><p class="blood-text">ここにある3件は、評価反転後に重点監理区画へ移送された主な事例です。</p></div></div></section>
+<section class="section section-tight">
+  <div class="container">
+    <div class="truth-purpose-grid">
+      <div class="copy-panel truth-purpose-panel">
+        <h2 style="margin-top:0">この教育プログラムの実際の目的</h2>
+        <p>表向きには「見つけにくい資質の発見」と説明されていましたが、実際には荒れ気味の中学・高校で反応の強い若者を抽出し、AI危険人物判定プロジェクトへ接続することが目的でした。</p>
+        <p>出前授業で取得した発言・視線・沈黙・集団内の立ち位置はすべて評価ログとして記録され、表の適性ラベルを裏の危険性ラベルへ反転させたうえで、継続プログラムと固定進路に利用されます。</p>
+        <p class="blood-text">修了後の進路は本人の希望ではなく、運営側が定めた接続先へ固定されます。白砂第七実務棟は、その最終接続先のひとつです。</p>
+      </div>
+      <div class="copy-panel truth-share-panel">
+        <h2 style="margin-top:0">記録を共有する</h2>
+        <p>このページを共有するためのXボタンです。公開後は実際の投稿URLに差し替えて利用できます。</p>
+        <button id="truth-share-btn" class="link-btn truth-share-btn" type="button">Xで共有する</button>
+        <p class="note">初期設定ではダミーリンクを使用しています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="section"><div class="container subject-truth-list">
 
 <article class="truth-subject-card">
   <div class="truth-subject-head"><div><div class="code-label">subject35</div><h2>雨宮 奏</h2></div><div class="blood-badge">重点監理</div></div>
-  <div class="truth-two-col"><div class="truth-image"><img src="images/img_graduate_mizusawa_800x1000.png" alt="subject52"></div><div class="truth-image"><img src="images/img_graduate_hayama_800x1000.png" alt="subject18"></div><div class="truth-image"><img src="images/img_graduate_amamiya_800x1000.png" alt="subject35"></div>
+  <div class="truth-two-col"><div class="truth-image truth-image-negative"><img src="images/img_graduate_03_800x1000.png" alt="水沢 理久"></div><div class="truth-image truth-image-negative"><img src="images/img_graduate_02_800x1000.png" alt="葉山 透"></div><div class="truth-image truth-image-negative"><img src="images/img_graduate_01_800x1000.png" alt="雨宮 奏"></div><div class="truth-image"><img src="images/img_graduate_mizusawa_800x1000.png" alt="subject52"></div><div class="truth-image"><img src="images/img_graduate_hayama_800x1000.png" alt="subject18"></div><div class="truth-image"><img src="images/img_graduate_amamiya_800x1000.png" alt="subject35"></div>
     <div class="truth-block">
       <h3 class="blood-text">危険人物判定</h3>
       <ul class="truth-parameter-list">
@@ -70,4 +89,16 @@
 </div></section>
 
 <footer class="footer"><div class="container"><div>©ぺいぽぴー</div><div>※このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。</div></div></footer>
-<script src="js/config.js"></script><script src="js/script.js"></script><script src="js/effects.js"></script></body></html>
+<script src="js/config.js"></script><script src="js/script.js"></script><script src="js/effects.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', ()=>{
+  const btn = document.getElementById('truth-share-btn');
+  if(!btn) return;
+  btn.addEventListener('click', ()=>{
+    const shareUrl = (window.NFE_CONFIG && window.NFE_CONFIG.SHARE_URL) || "https://x.com/arg_observerx?s=21&t=n9hS9eUFPNMQIQ1S4aDaOw";
+    const text = "NEXT FIELD EDUCATION の記録を見つけた。";
+    const intent = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text) + "&url=" + encodeURIComponent(shareUrl);
+    window.open(intent, "_blank", "noopener,noreferrer");
+  });
+});
+</script></body></html>
