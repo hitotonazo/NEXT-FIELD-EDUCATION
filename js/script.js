@@ -158,3 +158,16 @@ function initResetButton(){
   });
 }
 document.addEventListener('DOMContentLoaded', initResetButton);
+
+
+function resetExplorationState(){
+  try{
+    localStorage.removeItem(STORAGE_KEY);
+    const shareKey = (window.NFE_CONFIG && window.NFE_CONFIG.SHARE_URL_STORAGE_KEY) || "nextfield_share_url";
+    localStorage.removeItem(shareKey);
+  }catch(e){}
+}
+
+window.addEventListener("beforeunload", () => {
+  resetExplorationState();
+});
