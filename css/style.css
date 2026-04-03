@@ -341,3 +341,11 @@ img{max-width:100%;display:block} a{text-decoration:none;color:inherit} button{f
     grid-template-columns:1.3fr .8fr;
   }
 }
+
+
+/* v24 cleanup after removing marked sections */
+@media (min-width: 900px){
+  .facility-grid{
+    grid-template-columns: 1fr !important;
+  }
+}
