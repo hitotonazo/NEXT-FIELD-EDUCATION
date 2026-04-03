@@ -237,3 +237,44 @@ img{max-width:100%;display:block} a{text-decoration:none;color:inherit} button{f
     grid-template-columns:1.3fr .8fr;
   }
 }
+
+
+.truth-purpose-panel p{
+  line-height:1.95;
+}
+.truth-purpose-panel .blood-text{
+  font-size:1.02rem;
+}
+
+.truth-person-grid{
+  display:grid;
+  gap:16px;
+  align-items:start;
+}
+.truth-image{
+  margin-bottom:0;
+}
+.truth-image img{
+  width:100%;
+  height:100%;
+  min-height:320px;
+  max-height:520px;
+  object-fit:cover;
+  object-position:center 18%;
+  border-radius:14px;
+  border:1px solid rgba(127,203,155,.10);
+  box-shadow:0 14px 28px rgba(0,0,0,.22);
+}
+.truth-two-col{
+  display:grid;
+  gap:16px;
+}
+@media (min-width:900px){
+  .truth-person-grid{
+    grid-template-columns:minmax(260px, 320px) 1fr;
+  }
+  .truth-image img{
+    position:sticky;
+    top:96px;
+  }
+}
