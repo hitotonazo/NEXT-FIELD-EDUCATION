@@ -184,3 +184,6 @@ img{max-width:100%;display:block} a{text-decoration:none;color:inherit} button{f
 .truth-parameter-list li{display:grid;gap:4px;padding-bottom:10px;border-bottom:1px dashed rgba(255,255,255,.08)}
 .truth-parameter-list strong{font-size:16px}
 @media (min-width:900px){.truth-two-col{grid-template-columns:1.05fr 1fr}}
+
+.truth-image{margin-bottom:12px}
+.truth-image img{width:100%;border-radius:12px;object-fit:cover}
