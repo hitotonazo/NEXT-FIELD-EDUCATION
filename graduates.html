@@ -27,6 +27,25 @@
   </div>
 </header>
 
+<section class="section universal-search-section">
+  <div class="container">
+    <div class="search-box universal-search-box">
+      <div class="search-head">
+        <div>
+          <h2 style="margin:0">サイト内検索</h2>
+          <p class="note">施設名・記録語・内部用語で検索できます。</p>
+        </div>
+      </div>
+      <div class="search-row">
+        <input id="site-search" type="search" placeholder="">
+        <button id="site-search-btn" class="link-btn">検索</button>
+      </div>
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </div>
+</section>
+
+
 <section class="page-hero">
   <div class="container">
     <h1>CASE NOTES</h1>
@@ -159,5 +178,5 @@
 <script src="js/script.js"></script>
 <script src="js/effects.js"></script>
 <script>document.addEventListener('DOMContentLoaded',()=>{const panel=document.getElementById('route-truth-panel');if(panel && getStage()>1){panel.classList.remove('hidden');}});</script>
-</body>
+<script src="js/search.js"></script></body>
 </html>
