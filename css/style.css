@@ -419,3 +419,42 @@ body.stage1-unlocked .stage1-blood-target,
     0 0 12px rgba(40,0,0,.45);
 }
 .truth-theme .stage1-blood-target{color:#a51212 !important}
+
+
+/* v28: 白砂第七実務棟 is blood before anomaly1, normal after anomaly1 */
+.stage1-blood-target{
+  color:#8a0f0f !important;
+  font-weight:800;
+  text-shadow:
+    0 0 1px rgba(255,230,230,.35),
+    0 0 5px rgba(90,0,0,.35),
+    0 0 12px rgba(40,0,0,.45);
+}
+body.stage1-unlocked .stage1-blood-target{
+  color:inherit !important;
+  font-weight:inherit;
+  text-shadow:none;
+}
+.truth-theme .stage1-blood-target{
+  color:#a51212 !important;
+  font-weight:800;
+  text-shadow:
+    0 0 1px rgba(255,230,230,.35),
+    0 0 5px rgba(90,0,0,.35),
+    0 0 12px rgba(40,0,0,.45);
+}
+
+
+/* v28 top menu section */
+.menu-topic-card a{
+  display:grid;
+  gap:12px;
+}
+.menu-topic-card img{
+  aspect-ratio:4/3;
+}
+.menu-topic-card .topic-meta span:first-child{
+  letter-spacing:.08em;
+  font-weight:700;
+  color:#6d756b;
+}
