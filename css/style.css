@@ -494,3 +494,54 @@ body.stage1-unlocked .stage1-blood-target{
   50%{filter:blur(.15px); transform:translateY(.5px); opacity:1;}
   100%{filter:blur(.35px); transform:translateY(-.5px); opacity:.92;}
 }
+
+
+/* v30 stronger subject effect */
+.subject-blood-effect{
+  color:#b30000 !important;
+  font-weight:900;
+  position:relative;
+  animation: glitchBlood 1.2s infinite;
+}
+
+.subject-blood-effect::before,
+.subject-blood-effect::after{
+  content:"subject";
+  position:absolute;
+  left:0;
+  top:0;
+  opacity:.6;
+}
+
+.subject-blood-effect::before{
+  color:#ff0000;
+  transform:translate(1px,0);
+  animation: glitch1 .8s infinite;
+}
+
+.subject-blood-effect::after{
+  color:#550000;
+  transform:translate(-1px,0);
+  animation: glitch2 .8s infinite;
+}
+
+@keyframes glitchBlood{
+  0%{transform:translate(0,0);}
+  20%{transform:translate(0.5px,-0.5px);}
+  40%{transform:translate(-0.5px,0.5px);}
+  60%{transform:translate(0.5px,0.5px);}
+  80%{transform:translate(-0.5px,-0.5px);}
+  100%{transform:translate(0,0);}
+}
+
+@keyframes glitch1{
+  0%{clip-path:inset(0 0 80% 0);}
+  50%{clip-path:inset(20% 0 40% 0);}
+  100%{clip-path:inset(0 0 80% 0);}
+}
+
+@keyframes glitch2{
+  0%{clip-path:inset(80% 0 0 0);}
+  50%{clip-path:inset(40% 0 20% 0);}
+  100%{clip-path:inset(80% 0 0 0);}
+}
