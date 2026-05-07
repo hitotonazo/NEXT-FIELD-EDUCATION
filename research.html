@@ -1,4 +1,4 @@
-<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>NEXT FIELD EDUCATION | Frames</title><meta name="description" content="NEXT FIELD EDUCATIONの架空教育サイト"><link rel="icon" href="images/img_favicon_64x64.png"><link rel="stylesheet" href="css/style.css"></head><body class="" data-dynamic-title="NEXT FIELD EDUCATION | Internal Evaluation Axes"><header class="site-header"><div class="container site-header-inner"><button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button><a href="index.html" class="brand"><img src="images/img_logo_400x120.png" alt="NEXT FIELD EDUCATION"></a></div><div class="mobile-drawer"><nav><a href="index.html">トップ</a><a href="programs.html">ラボ</a><a href="graduates.html">ケースノート</a><a href="research.html">フレーム</a><a href="company.html">スタジオ案内</a><a href="contact.html">コンタクト</a></nav></div></header>
+<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>NEXT FIELD EDUCATION | Frames</title><meta name="description" content="NEXT FIELD EDUCATIONの架空教育サイト"><link rel="icon" href="images/img_favicon_64x64.png"><link rel="stylesheet" href="css/style.css"></head><body class="" data-dynamic-title="NEXT FIELD EDUCATION | Internal Evaluation Axes"><header class="site-header"><div class="container site-header-inner"><button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span><em>MENU</em></button><a href="index.html" class="brand"><img src="images/img_logo_400x120.png" alt="NEXT FIELD EDUCATION"></a></div><div class="mobile-drawer"><nav><a href="index.html">トップ</a><a href="programs.html">ラボ</a><a href="graduates.html">ケースノート</a><a href="research.html">フレーム</a><a href="company.html">スタジオ案内</a><a href="contact.html">コンタクト</a></nav></div></header>
 
 <section class="section universal-search-section">
   <div class="container">
@@ -73,9 +73,13 @@ document.addEventListener('DOMContentLoaded',()=>{
   const radarFlip=document.getElementById('radar-model-flip');
   const dogear=document.getElementById('eval-dogear');
   const cards=[...document.querySelectorAll('[data-flip-card]')];
-  const progress = getProgress ? getProgress() : {stage:1, anomalies:{}};
-  const graduatesUnlocked = !!(progress.anomalies && progress.anomalies.graduates);
-  const researchUnlocked = !!(progress.anomalies && progress.anomalies.research);
+
+  const showDogearIfAllowed=()=>{
+    const p = getProgress ? getProgress() : {anomalies:{}};
+    if(dogear && p.anomalies && p.anomalies.graduates){
+      dogear.classList.remove('is-hidden');
+    }
+  };
 
   const applyReverseMode=()=>{
     document.body.classList.add('truth-theme');
@@ -93,11 +97,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     initRadarCharts();
   };
 
-  if(graduatesUnlocked && dogear){
-    dogear.classList.remove('is-hidden');
-  }
+  showDogearIfAllowed();
 
-  if(researchUnlocked){
+  const progress = getProgress ? getProgress() : {anomalies:{}};
+  if(progress.anomalies && progress.anomalies.research){
     applyReverseMode();
   } else {
     applyFrontMode();
@@ -105,15 +108,22 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   if(dogear){
     dogear.addEventListener('click',()=>{
-      const current = getProgress ? getProgress() : {stage:1, anomalies:{}};
+      const current = getProgress ? getProgress() : {anomalies:{}};
       const canOpenDogear = !!(current.anomalies && current.anomalies.graduates);
-      const alreadyFlipped = !!(current.anomalies && current.anomalies.research);
       if(!canOpenDogear) return;
-      if(!alreadyFlipped){
+
+      const isFlipped = !!(radarFlip && radarFlip.classList.contains('is-flipped'));
+
+      if(!current.anomalies.research && !isFlipped){
         runSiteAlteredOverlay(()=>{ applyReverseMode(); });
         return;
       }
-      applyReverseMode();
+
+      if(isFlipped){
+        applyFrontMode();
+      } else {
+        applyReverseMode();
+      }
     });
   }
 });

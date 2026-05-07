@@ -367,3 +367,55 @@ img{max-width:100%;display:block} a{text-decoration:none;color:inherit} button{f
     padding:12px 0 6px;
   }
 }
+
+
+/* v27 clearer menu */
+.menu-toggle{
+  display:flex !important;
+  align-items:center;
+  gap:10px;
+  min-width:92px;
+  min-height:44px;
+  padding:8px 12px !important;
+  border:1px solid rgba(84,126,71,.18) !important;
+  background:rgba(255,255,255,.78) !important;
+}
+.menu-toggle em{
+  font-style:normal;
+  font-size:12px;
+  letter-spacing:.12em;
+  color:var(--brand-deep);
+  font-weight:700;
+}
+.menu-toggle span{width:26px !important}
+.mobile-drawer nav a{
+  font-weight:700;
+  border:1px solid rgba(84,126,71,.12);
+  background:rgba(255,255,255,.72);
+}
+.truth-theme .menu-toggle{
+  background:rgba(20,24,30,.82) !important;
+  border-color:rgba(127,203,155,.20) !important;
+}
+.truth-theme .menu-toggle em{color:#bde8cb}
+.truth-theme .mobile-drawer nav a{
+  background:rgba(255,255,255,.03);
+  border-color:rgba(127,203,155,.13);
+}
+@media (max-width:520px){
+  .menu-toggle{min-width:50px;gap:0}
+  .menu-toggle em{display:none}
+}
+
+/* v27 stage1 blood text */
+.stage1-blood-target{color:inherit}
+body.stage1-unlocked .stage1-blood-target,
+.truth-theme .stage1-blood-target{
+  color:#8a0f0f !important;
+  font-weight:800;
+  text-shadow:
+    0 0 1px rgba(255,230,230,.35),
+    0 0 5px rgba(90,0,0,.35),
+    0 0 12px rgba(40,0,0,.45);
+}
+.truth-theme .stage1-blood-target{color:#a51212 !important}
