@@ -787,3 +787,76 @@ body.stage1-unlocked .menu-topic-frames::after{
     font-size:9px;
   }
 }
+
+
+/* v35 EAEO operation note */
+.eaeo-note{
+  color:#bde8cb;
+  border:1px solid rgba(127,203,155,.18);
+  background:rgba(127,203,155,.06);
+  border-radius:12px;
+  padding:10px 12px;
+  margin:0 0 14px;
+}
+.eaeo-note.small{
+  font-size:.9rem;
+  padding:8px 10px;
+  margin:0 0 10px;
+}
+
+/* v35 debug button */
+.site-header-inner{position:relative}
+.debug-alter-btn{
+  position:absolute;
+  right:0;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:3;
+  appearance:none;
+  border:1px solid rgba(160,0,0,.28);
+  background:rgba(160,0,0,.08);
+  color:#9d0000;
+  font-weight:800;
+  letter-spacing:.08em;
+  font-size:11px;
+  border-radius:999px;
+  padding:8px 10px;
+  cursor:pointer;
+  min-height:36px;
+}
+.debug-alter-btn:hover,
+.debug-alter-btn.is-waiting{
+  background:#9d0000;
+  color:#fff;
+  box-shadow:0 0 18px rgba(157,0,0,.35);
+}
+.truth-theme .debug-alter-btn{
+  border-color:rgba(220,50,50,.35);
+  background:rgba(220,50,50,.10);
+  color:#ff9b9b;
+}
+.truth-theme .debug-alter-btn:hover,
+.truth-theme .debug-alter-btn.is-waiting{
+  background:#b00000;
+  color:#fff;
+}
+@media (max-width:760px){
+  .debug-alter-btn{
+    right:8px;
+    font-size:10px;
+    padding:6px 8px;
+    min-height:32px;
+  }
+  .brand img{max-width:42vw}
+}
+@media (max-width:480px){
+  .debug-alter-btn{
+    font-size:0;
+    width:36px;
+    padding:0;
+  }
+  .debug-alter-btn::after{
+    content:"5s";
+    font-size:10px;
+  }
+}
