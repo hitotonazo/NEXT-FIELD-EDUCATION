@@ -187,3 +187,19 @@ function initDebugAlterButton(){
   });
 }
 document.addEventListener('DOMContentLoaded', initDebugAlterButton);
+
+
+function initExploreResetButton(){
+  document.querySelectorAll('.explore-reset-btn').forEach(btn=>{
+    if(btn.dataset.bound === "1") return;
+    btn.dataset.bound = "1";
+    btn.addEventListener('click', ()=>{
+      try{
+        localStorage.clear();
+        sessionStorage.clear();
+      }catch(e){}
+      location.href='index.html?reset=1';
+    });
+  });
+}
+document.addEventListener('DOMContentLoaded', initExploreResetButton);

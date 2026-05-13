@@ -860,3 +860,52 @@ body.stage1-unlocked .menu-topic-frames::after{
     font-size:10px;
   }
 }
+
+
+/* v36 reset button */
+.explore-reset-btn{
+  position:absolute;
+  right:96px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:3;
+  appearance:none;
+  border:1px solid rgba(80,80,80,.22);
+  background:#f4f4f4;
+  color:#444;
+  font-weight:800;
+  letter-spacing:.08em;
+  font-size:11px;
+  border-radius:999px;
+  padding:8px 10px;
+  cursor:pointer;
+  min-height:36px;
+}
+.explore-reset-btn:hover{
+  background:#222;
+  color:#fff;
+}
+.truth-theme .explore-reset-btn{
+  background:rgba(255,255,255,.06);
+  color:#ddd;
+  border-color:rgba(255,255,255,.12);
+}
+.truth-theme .explore-reset-btn:hover{
+  background:#fff;
+  color:#111;
+}
+@media (max-width:760px){
+  .explore-reset-btn{
+    right:78px;
+    font-size:10px;
+    padding:6px 8px;
+    min-height:32px;
+  }
+}
+@media (max-width:480px){
+  .explore-reset-btn{
+    width:44px;
+    font-size:9px;
+    padding:0;
+  }
+}
