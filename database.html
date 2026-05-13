@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>NEXT FIELD EDUCATION | Subject Archive</title>
   <meta name="description" content="NEXT FIELD EDUCATIONの内部記録アーカイブ">
-  <link rel="icon" href="images/img_favicon_64x64.png">
+  
   <link rel="stylesheet" href="css/style.css">
+
+<link rel="icon" type="image/x-icon" href="https://pub-4952ba4a72ee4fb5923495a3626649d3.r2.dev/images/common/favicon.ico">
+
 </head>
 <body class="truth-theme" data-dynamic-title="NEXT FIELD EDUCATION | Subject Archive">
 <header class="site-header">
@@ -193,7 +196,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
   if(!btn) return;
   btn.addEventListener('click', ()=>{
     const shareUrl = (window.NFE_CONFIG && window.NFE_CONFIG.SHARE_URL) || "https://x.com/arg_observerx?s=21&t=n9hS9eUFPNMQIQ1S4aDaOw";
-    const text = "この民泊サイトの真相、気づいた人いますか\n普通のサイトじゃないです\n#おかしなサイト";
+    const text = "このサイトの真相、気づいた人いますか
+普通のサイトじゃないです
+#おかしなサイト";
     const intent = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text) + "&url=" + encodeURIComponent(shareUrl);
     window.open(intent, "_blank", "noopener,noreferrer");
   });
