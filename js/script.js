@@ -188,15 +188,30 @@ function initExploreResetButton(){
 document.addEventListener('DOMContentLoaded', initExploreResetButton);
 
 
+
+
 function initSubjectHintTargets(){
-  document.querySelectorAll('.subject-hint-target').forEach(el=>{
-    if(el.dataset.subjectHintBound === "1") return;
-    el.dataset.subjectHintBound = "1";
-    el.setAttribute('tabindex','0');
-    el.addEventListener('click', ()=>{
+  const imgs = document.querySelectorAll('img[data-r2-src], img[src*="r2.dev"], img');
+  imgs.forEach((img)=>{
+    if(img.closest('.subject-hint-target')) return;
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'subject-hint-target';
+
+    img.parentNode.insertBefore(wrapper, img);
+    wrapper.appendChild(img);
+
+    const hint = document.createElement('span');
+    hint.className = 'subject-search-hint';
+    hint.textContent = 'search for subject';
+
+    wrapper.appendChild(hint);
+
+    wrapper.addEventListener('click', ()=>{
       if(!(document.body.classList.contains('anomaly2-unlocked') || document.body.classList.contains('truth-theme'))) return;
-      el.classList.toggle('is-selected');
+      wrapper.classList.toggle('is-selected');
     });
   });
 }
+
 document.addEventListener('DOMContentLoaded', initSubjectHintTargets);
