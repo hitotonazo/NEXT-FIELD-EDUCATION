@@ -948,10 +948,7 @@ body.truth-theme .subject-hint-target.is-selected .subject-search-hint{
   display:block;
 }
 
-body.anomaly2-unlocked .subject-hint-target:hover img,
-body.truth-theme .subject-hint-target:hover img{
-  filter:brightness(.7);
-}
+
 
 @keyframes subjectHintFade{
   from{opacity:.25;}
@@ -962,4 +959,18 @@ body.truth-theme .subject-hint-target:hover img{
   .subject-search-hint{
     font-size:18px;
   }
+}
+
+
+/* v40: subject hint should not darken images */
+body.anomaly2-unlocked .subject-hint-target:hover img,
+body.truth-theme .subject-hint-target:hover img,
+body.anomaly2-unlocked .subject-hint-target.is-selected img,
+body.truth-theme .subject-hint-target.is-selected img{
+  filter:none !important;
+}
+.site-header .subject-search-hint,
+.brand .subject-search-hint,
+header .subject-search-hint{
+  display:none !important;
 }

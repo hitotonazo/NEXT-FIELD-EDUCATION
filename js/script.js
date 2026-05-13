@@ -190,9 +190,25 @@ document.addEventListener('DOMContentLoaded', initExploreResetButton);
 
 
 
+
+
 function initSubjectHintTargets(){
   const imgs = document.querySelectorAll('img[data-r2-src], img[src*="r2.dev"], img');
   imgs.forEach((img)=>{
+    // 全ページ共通：ヘッダー内ロゴ・メニュー・検索欄周辺は対象外
+    if(
+      img.closest('header') ||
+      img.closest('.site-header') ||
+      img.closest('.site-header-inner') ||
+      img.closest('.brand') ||
+      img.closest('.mobile-drawer') ||
+      img.closest('.universal-search-section') ||
+      img.closest('.top-search-box') ||
+      img.closest('.search-box')
+    ){
+      return;
+    }
+
     if(img.closest('.subject-hint-target')) return;
 
     const wrapper = document.createElement('div');
