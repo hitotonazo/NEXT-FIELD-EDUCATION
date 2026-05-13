@@ -943,8 +943,8 @@ body.stage1-unlocked .menu-topic-frames::after{
 
 body.anomaly2-unlocked .subject-hint-target:hover .subject-search-hint,
 body.anomaly2-unlocked .subject-hint-target.is-selected .subject-search-hint,
-body.truth-theme .subject-hint-target:hover .subject-search-hint,
-body.truth-theme .subject-hint-target.is-selected .subject-search-hint{
+
+body.anomaly2-unlocked .subject-hint-target.is-selected .subject-search-hint{
   display:block;
 }
 
@@ -972,5 +972,11 @@ body.truth-theme .subject-hint-target.is-selected img{
 .site-header .subject-search-hint,
 .brand .subject-search-hint,
 header .subject-search-hint{
+  display:none !important;
+}
+
+
+/* v41: no subject hint on truth pages */
+body.truth-theme .subject-search-hint{
   display:none !important;
 }
