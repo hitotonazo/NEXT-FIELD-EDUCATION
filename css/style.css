@@ -980,30 +980,3 @@ header .subject-search-hint{
 body.truth-theme .subject-search-hint{
   display:none !important;
 }
-
-
-/* v42: subject effect disabled in reverse-evaluation model */
-.subject-blood-effect{
-  color:inherit !important;
-  font-weight:inherit !important;
-  letter-spacing:inherit !important;
-  text-shadow:none !important;
-  animation:none !important;
-  transform:none !important;
-  filter:none !important;
-}
-.subject-blood-effect::before,
-.subject-blood-effect::after{
-  content:none !important;
-  display:none !important;
-}
-
-/* v42: truth page images remain negative even when selected/hovered */
-body.truth-theme .truth-image-negative img,
-body.truth-theme .truth-image-negative:hover img,
-body.truth-theme .truth-image-negative.is-selected img,
-body.truth-theme .subject-hint-target.truth-image-negative img,
-body.truth-theme .subject-hint-target.truth-image-negative:hover img,
-body.truth-theme .subject-hint-target.truth-image-negative.is-selected img{
-  filter: invert(1) hue-rotate(180deg) contrast(1.08) brightness(.95) !important;
-}
