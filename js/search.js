@@ -13,16 +13,24 @@ async function initSearch(){
     if(!q) return;
 
     if(q==='白砂第七実務棟'){
-      runSiteAlteredOverlay(()=>{
-        markAnomaly('graduates');
-        setStage(2);
+      const p = getProgress();
+      if(p.anomalies && p.anomalies.graduates){
         window.location.href='facility.html';
-      });
+      } else {
+        runSiteAlteredOverlay(()=>{
+          markAnomaly('graduates');
+          setStage(2);
+          window.location.href='facility.html';
+        });
+      }
       return;
     }
 
     if(q==='被験者' || qLower==='subject' || /^subject\d*$/i.test(q)){
-      if(getStage()>=3){
+      const p = getProgress();
+      if(p.anomalies && p.anomalies.subject){
+        window.location.href='database.html';
+      } else if(getStage()>=3){
         runSiteAlteredOverlay(()=>{
           markAnomaly('subject');
           setStage(4);
