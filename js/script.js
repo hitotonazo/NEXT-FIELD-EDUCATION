@@ -31,7 +31,39 @@ function runSiteAlteredOverlay(nextAction = null) { const noiseOverlay=document.
 function closeSiteAlteredOverlay() { const noiseOverlay=document.getElementById('noise-overlay'); if (!noiseOverlay) return; noiseOverlay.classList.remove('is-active'); noiseOverlay.setAttribute('aria-hidden', 'true'); }
 function handleNoiseOverlayClick() { closeSiteAlteredOverlay(); if (typeof noiseNextAction === 'function') { const action = noiseNextAction; noiseNextAction = null; action(); return; } noiseNextAction = null; }
 
-document.addEventListener('DOMContentLoaded', ()=>{applyAssetSources(); ensureNoiseOverlay(); setupDrawer(); setCurrentNav(); applyGlobalState();});
+function triggerDemoSiteAlteration(){
+  const p = getProgress();
+  p.anomalies = {graduates:true, research:true, subject:true};
+  p.count = 3;
+  p.stage = Math.max(p.stage || 1, 4);
+  saveProgress(p);
+  applyGlobalState();
+  runSiteAlteredOverlay();
+}
+
+function initDemoLogoAlteration(){
+  const path = location.pathname.split('/').pop() || 'index.html';
+  if(path !== 'index.html') return;
+
+  const brand = document.querySelector('.site-header .brand');
+  if(!brand || brand.dataset.demoAlterBound === "1") return;
+  brand.dataset.demoAlterBound = "1";
+
+  let timerId = null;
+  brand.addEventListener('click', (event)=>{
+    event.preventDefault();
+    if(timerId) return;
+
+    brand.classList.add('is-demo-waiting');
+    timerId = window.setTimeout(()=>{
+      brand.classList.remove('is-demo-waiting');
+      timerId = null;
+      triggerDemoSiteAlteration();
+    }, 5000);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', ()=>{applyAssetSources(); ensureNoiseOverlay(); setupDrawer(); setCurrentNav(); applyGlobalState(); initDemoLogoAlteration();});
 
 
 function bindNoiseMessageHover(){

@@ -22,6 +22,8 @@ img{max-width:100%;display:block} a{text-decoration:none;color:inherit} button{f
 .site-header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,.06)}
 .site-header-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .brand{display:flex;align-items:center;gap:14px;min-width:0}.brand img{width:190px;max-width:52vw;height:auto}
+.brand.is-demo-waiting img{animation:demoLogoWaiting 1s ease-in-out infinite alternate;filter:drop-shadow(0 0 10px rgba(157,0,0,.42))}
+@keyframes demoLogoWaiting{from{transform:translateX(0);opacity:1}to{transform:translateX(1px);opacity:.72}}
 .menu-toggle,.header-icon{appearance:none;border:0;background:none;padding:10px;border-radius:14px;display:grid;place-items:center;cursor:pointer}
 .menu-toggle span{display:block;width:32px;height:3px;background:#111;border-radius:99px;margin:3px 0}
 .header-icon{width:46px;height:46px;background:#2f6fed;color:#fff;font-weight:700;font-size:28px}
